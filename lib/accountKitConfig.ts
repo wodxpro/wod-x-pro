@@ -2,10 +2,12 @@
  * Configuração do Alchemy Account Kit
  * 
  * Configuração para Email OTP Authentication e outras funcionalidades
+ * 
+ * IMPORTANTE: Os contratos estão deployados na Polygon Mainnet (Chain ID: 137)
  */
 
 import { createConfig, AlchemyAccountsUIConfig } from "@account-kit/react";
-import { polygonMumbai, alchemy } from "@account-kit/infra";
+import { polygon, alchemy } from "@account-kit/infra";
 
 // Função para criar a configuração (evita problemas de SSR)
 export function getAccountKitConfig() {
@@ -35,10 +37,11 @@ export function getAccountKitConfig() {
   };
 
   // Configuração principal do Account Kit
+  // Usando Polygon Mainnet (onde os contratos estão deployados)
   return createConfig(
     {
       transport: alchemy({ apiKey }),
-      chain: polygonMumbai,
+      chain: polygon, // Polygon Mainnet (Chain ID: 137)
     },
     uiConfig,
   );
