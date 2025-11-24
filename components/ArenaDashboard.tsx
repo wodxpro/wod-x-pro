@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import { useArena } from '@/hooks/useArena';
 import { useWODToken } from '@/hooks/useWODToken';
-import { getTrainingLogs, TrainingLog } from '@/lib/trainingLog';
+import { getTrainingLogs, TrainingLog, markTrainingSynced } from '@/lib/trainingLog';
 
 interface Challenge {
   id: number;
@@ -87,7 +87,16 @@ export function ArenaDashboard() {
 
     try {
       const submitAction = arena.submitProof();
-      submitAction.submitProof(challengeId, training.videoCID);
+      await submitAction.submitProof(challengeId, training.videoCID);
+      
+      // Marcar treino como sincronizado on-chain após submissão bem-sucedida
+      markTrainingSynced(training.id, challengeId);
+      
+      // Atualizar lista de treinos disponíveis
+      setTrainingLogs(getTrainingLogs().filter(t => t.videoCID && !t.syncedOnChain));
+      setSelectedTraining(null);
+      
+      alert('✅ Prova submetida! Treino agora está registrado on-chain.');
     } catch (error) {
       console.error('Error submitting proof:', error);
       alert('Erro ao submeter prova');
