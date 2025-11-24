@@ -10,6 +10,7 @@ Bem-vindo à documentação do frontend do WOD X PRO!
 - **[Variáveis de Ambiente](./setup/ENV_SETUP.md)** - Configuração de variáveis de ambiente
 - **[Variáveis para Vercel](./setup/VERCEL_ENV.md)** - Guia de variáveis de ambiente para deploy na Vercel
 - **[Assets e Imagens](./setup/ASSETS.md)** - Onde colocar logos, imagens e ícones
+- **[PWA iOS e Miniapp](./setup/PWA_IOS.md)** - Configuração para PWA iOS e miniapp
 
 ### ⚙️ Configuração
 
