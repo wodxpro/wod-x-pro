@@ -2,7 +2,8 @@
 
 import { useSignerStatus, useUser } from '@account-kit/react';
 import { useAccount } from 'wagmi';
-import { LoginButton } from '@/components/LoginButton';
+import Link from 'next/link';
+import { Button } from '@/app/ui/Button';
 import { ArenaDashboard } from '@/components/ArenaDashboard';
 import { DailyTraining } from '@/components/DailyTraining';
 import { OnRampPIX } from '@/components/OnRampPIX';
@@ -46,7 +47,9 @@ export default function Home() {
                 )}
               </div>
             ) : (
-              <LoginButton />
+              <Link href="/login">
+                <Button variant="primary">Login</Button>
+              </Link>
             )}
           </div>
         </header>
@@ -54,6 +57,28 @@ export default function Home() {
         {/* Main Content */}
         {isConnected ? (
           <div className="space-y-6">
+            {/* Navegação Rápida */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+              <Link href="/dashboard">
+                <div className="bg-arena border border-token/20 rounded-lg p-4 hover:shadow-token transition-shadow cursor-pointer text-center">
+                  <p className="text-sm font-semibold text-protocol">Dashboard</p>
+                </div>
+              </Link>
+              <Link href="/desafios">
+                <div className="bg-arena border border-token/20 rounded-lg p-4 hover:shadow-token transition-shadow cursor-pointer text-center">
+                  <p className="text-sm font-semibold text-protocol">Desafios</p>
+                </div>
+              </Link>
+              <Link href="/validar">
+                <div className="bg-arena border border-token/20 rounded-lg p-4 hover:shadow-token transition-shadow cursor-pointer text-center">
+                  <p className="text-sm font-semibold text-protocol">Validar</p>
+                </div>
+              </Link>
+              <div className="bg-arena border border-token/20 rounded-lg p-4 text-center">
+                <p className="text-sm font-semibold text-protocol">Arena</p>
+              </div>
+            </div>
+
             <IPFSStatus />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="space-y-6">
@@ -74,7 +99,9 @@ export default function Home() {
             <p className="text-protocol/70 mb-8">
               Use Alchemy Account Kit para login social e acesso sem fricção
             </p>
-            <LoginButton />
+            <Link href="/login">
+              <Button variant="primary">Fazer Login</Button>
+            </Link>
           </div>
         )}
       </div>

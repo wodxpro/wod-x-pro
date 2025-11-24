@@ -9,14 +9,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'WOD[X] PRO',
+  title: 'WOD[X]PRO',
   description: 'Transforme esforço físico em valor digital real.',
   manifest: '/manifest.json',
   themeColor: '#ff1c16',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'WOD[X] PRO',
+    title: 'WOD[X]PRO',
     startupImage: [
       {
         url: '/icons/ios/1024.png',
