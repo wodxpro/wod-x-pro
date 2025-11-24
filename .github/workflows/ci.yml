@@ -20,7 +20,15 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
+        run: |
+          # Se @wodxpro/contract-data não estiver no npm, usar versão do GitHub
+          if ! npm view @wodxpro/contract-data version 2>/dev/null; then
+            echo "⚠️ @wodxpro/contract-data não encontrado no npm, usando GitHub..."
+            npm install --save @wodxpro/contract-data@github:wodxpro/wod-eth
+          else
+            npm ci
+          fi
+        continue-on-error: false
       
       - name: Run linter
         run: npm run lint
@@ -40,11 +48,13 @@ jobs:
       
       - name: Install dependencies
         run: |
-          # Tentar instalar normalmente
-          npm ci || {
-            echo "⚠️ npm ci falhou, tentando npm install..."
-            npm install
-          }
+          # Se @wodxpro/contract-data não estiver no npm, usar versão do GitHub
+          if ! npm view @wodxpro/contract-data version 2>/dev/null; then
+            echo "⚠️ @wodxpro/contract-data não encontrado no npm, usando GitHub..."
+            npm install --save @wodxpro/contract-data@github:wodxpro/wod-eth
+          else
+            npm ci
+          fi
         continue-on-error: false
       
       - name: Build application
