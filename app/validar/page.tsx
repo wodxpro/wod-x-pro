@@ -101,12 +101,12 @@ export default function ValidarPage() {
               pendingSubmissions.map((submission, index) => (
                 <Card
                   key={index}
-                  className={`cursor-pointer transition-all ${
+                  onClick={() => setSelectedSubmission(submission)}
+                  className={`transition-all ${
                     selectedSubmission?.athlete === submission.athlete
                       ? 'border-token shadow-token'
                       : 'hover:border-token/50'
                   }`}
-                  onClick={() => setSelectedSubmission(submission)}
                 >
                   <div className="p-4">
                     <div className="flex justify-between items-start mb-2">

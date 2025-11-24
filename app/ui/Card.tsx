@@ -6,14 +6,17 @@ interface CardProps {
   children: ReactNode;
   className?: string;
   hover?: boolean;
+  onClick?: () => void;
 }
 
-export function Card({ children, className = '', hover = false }: CardProps) {
+export function Card({ children, className = '', hover = false, onClick }: CardProps) {
   return (
     <div
+      onClick={onClick}
       className={`
         bg-arena border border-token/20 rounded-xl shadow-lg p-6
         ${hover ? 'hover:shadow-token transition-shadow' : ''}
+        ${onClick ? 'cursor-pointer' : ''}
         ${className}
       `}
     >
