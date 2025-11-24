@@ -9,19 +9,26 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # cache removido - projeto não tem package-lock.json
       
       - name: Install Vercel CLI
         run: npm install -g vercel@latest
       
       - name: Install dependencies
-        run: npm ci
+        run: |
+          # Se @wodxpro/contract-data não estiver no npm, usar versão do GitHub
+          if ! npm view @wodxpro/contract-data version 2>/dev/null; then
+            echo "⚠️ @wodxpro/contract-data não encontrado no npm, usando GitHub..."
+            npm install --save @wodxpro/contract-data@github:wodxpro/wod-eth
+          else
+            npm install
+          fi
       
       - name: Deploy to Vercel
         run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
