@@ -171,9 +171,9 @@ O app pode ser deployado em qualquer plataforma que suporte Next.js:
 
 ## 🔗 Links
 
-- **Domain**: `wod.eth`
+- **Domain**: `wodx.pro`
 - **Token**: `$WOD`
-- **Contratos**: [wod-x-pro](../wod-x-pro)
+- **Repository**: [wodxpro/wod-x-pro](https://github.com/wodxpro/wod-x-pro)
 - **Package NPM**: `@wodxpro/contract-data`
 
 ## 📄 Licença
