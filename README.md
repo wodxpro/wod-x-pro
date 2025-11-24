@@ -29,7 +29,8 @@ NEXT_PUBLIC_ALCHEMY_API_KEY=your_alchemy_api_key
 NEXT_PUBLIC_ALCHEMY_POLICY_ID=your_policy_id
 
 # Chain
-NEXT_PUBLIC_CHAIN_ID=80002
+# IMPORTANTE: Chain ID 137 = Polygon Mainnet (onde os contratos estão deployados)
+NEXT_PUBLIC_CHAIN_ID=137
 
 # IPFS (Lighthouse - opcional)
 NEXT_PUBLIC_LIGHTHOUSE_API_KEY=your_lighthouse_key
@@ -159,8 +160,10 @@ O app pode ser deployado em qualquer plataforma que suporte Next.js:
 |----------|-----------|-------------|
 | `NEXT_PUBLIC_ALCHEMY_API_KEY` | Chave API do Alchemy | Sim |
 | `NEXT_PUBLIC_ALCHEMY_POLICY_ID` | Policy ID do Gas Manager | Sim |
-| `NEXT_PUBLIC_CHAIN_ID` | Chain ID (80002 = Amoy) | Sim |
+| `NEXT_PUBLIC_CHAIN_ID` | Chain ID (137 = Polygon Mainnet) | Sim |
 | `NEXT_PUBLIC_LIGHTHOUSE_API_KEY` | Chave API do Lighthouse | Não |
+
+**📖 Para mais detalhes, veja [Configuração de Variáveis de Ambiente](./docs/setup/ENV_SETUP.md)**
 
 ## 📝 Scripts Disponíveis
 
@@ -174,7 +177,18 @@ O app pode ser deployado em qualquer plataforma que suporte Next.js:
 - **Domain**: `wodx.pro`
 - **Token**: `$WOD`
 - **Repository**: [wodxpro/wod-x-pro](https://github.com/wodxpro/wod-x-pro)
-- **Package NPM**: `@wodxpro/contract-data`
+- **Chain**: Polygon Mainnet (Chain ID: 137)
+
+## 📚 Documentação
+
+Documentação completa disponível em [`docs/`](./docs/):
+
+- **[Índice](./docs/INDEX.md)** - Índice geral da documentação
+- **[Instalação](./docs/setup/INSTALLATION.md)** - Guia de instalação
+- **[Variáveis de Ambiente](./docs/setup/ENV_SETUP.md)** - Configuração de env vars
+- **[Thirdweb](./docs/configuration/THIRDWEB.md)** - Configuração Thirdweb
+- **[Guia do Usuário](./docs/guides/USER_GUIDE.md)** - O que você verá na aplicação
+- **[Status](./docs/status/STATUS.md)** - Status atual do projeto
 
 ## 📄 Licença
 
@@ -182,5 +196,5 @@ MIT
 
 ---
 
-**Última atualização:** Dezembro 2024
+**Última atualização:** 24 de Novembro de 2025
 

@@ -1,26 +1,24 @@
-# 👀 O Que Você Verá ao Carregar a Aplicação
+# 👀 Guia do Usuário
+
+O que você verá e como usar a aplicação WOD X PRO.
 
 ## 🎨 Tela Inicial (Sem Login)
 
-Quando você acessar `http://localhost:3000` pela primeira vez, verá:
+Quando você acessar `http://localhost:3000` pela primeira vez:
 
-### 1. **Header (Cabeçalho)**
-
+### Header (Cabeçalho)
 - **Título:** "WOD[X] PRO" (texto grande e em negrito)
 - **Subtítulo:** "Transforme esforço físico em valor digital real"
-- **Info:** "wod.eth • Token: $WOD" (fonte monoespaçada)
+- **Info:** "wodx.pro • Token: $WOD" (fonte monoespaçada)
 - **Botão de Login** no canto superior direito
 
-### 2. **Área Principal (Sem Login)**
-
+### Área Principal
 - **Título:** "Conecte sua wallet para começar"
 - **Descrição:** "Use Alchemy Account Kit para login social e acesso sem fricção"
 - **Botão de Login** centralizado
 
-### 3. **Opções de Login**
-
+### Opções de Login
 O botão de login oferece duas opções:
-
 - **Código (OTP)** - Recebe código por email
 - **Link Mágico** - Recebe link por email
 
@@ -28,49 +26,42 @@ O botão de login oferece duas opções:
 
 ## ✅ Tela Após Login
 
-Depois de fazer login com sucesso, você verá:
+Depois de fazer login com sucesso:
 
-### 1. **Header Atualizado**
-
+### Header Atualizado
 - Mesmo título e informações
 - **Endereço da wallet** (formato: `0x1234...5678`)
 - **Email do usuário** (se disponível)
 
-### 2. **Dashboard Completo**
+### Dashboard Completo
 
-#### **IPFSStatus** (no topo)
-
+#### IPFSStatus (no topo)
 - Status dos provedores IPFS configurados
 - Verifica se NFT.Storage ou Lighthouse estão disponíveis
 
-#### **Grid de 2 Colunas:**
+#### Grid de 2 Colunas
 
 **Coluna Esquerda:**
-
 - **DailyTraining** - Componente para registrar treinos diários
 - **OnRampPIX** - Interface para comprar tokens WOD via PIX
 
 **Coluna Direita:**
-
 - **ArenaDashboard** - Dashboard principal com desafios e competições
 
-#### **ValidatorDashboard** (abaixo do grid)
-
+#### ValidatorDashboard (abaixo do grid)
 - Painel para validadores votarem em submissões
 
 ---
 
 ## 🎨 Design e Cores
 
-### Paleta de Cores:
-
+### Paleta de Cores
 - **Fundo:** Bege claro (`#f4f0e9` - `bg-arena`)
 - **Texto Principal:** Preto (`#000000` - `text-protocol`)
 - **Acentos:** Vermelho (`#ff1c16` - `text-token`)
 - **Bordas:** Vermelho translúcido
 
-### Tipografia:
-
+### Tipografia
 - **Fonte:** Space Grotesk (Google Fonts)
 - **Monospace:** Para endereços de wallet e informações técnicas
 
@@ -88,9 +79,8 @@ Depois de fazer login com sucesso, você verá:
    - Verifique se `NEXT_PUBLIC_THIRDWEB_CLIENT_ID` está no `.env.local`
 
 3. **Erro de Contratos:**
-   - O pacote `@wodxpro/contract-data` não está instalado
-   - Alguns componentes podem não funcionar completamente
-   - Veja `NOTAS_INSTALACAO.md` para mais detalhes
+   - Os contratos estão deployados na Polygon Mainnet (Chain ID: 137)
+   - Verifique se `NEXT_PUBLIC_CHAIN_ID=137` está configurado
 
 4. **Erro de IPFS:**
    - Verifique se `NEXT_PUBLIC_LIGHTHOUSE_API_KEY` está configurado
@@ -113,13 +103,11 @@ Depois de fazer login com sucesso, você verá:
 ## 📱 Componentes Visíveis
 
 ### Sem Login:
-
 - ✅ Header com título
 - ✅ Botão de login
 - ✅ Mensagem de boas-vindas
 
 ### Com Login:
-
 - ✅ Header com informações do usuário
 - ✅ IPFSStatus
 - ✅ DailyTraining
@@ -129,21 +117,13 @@ Depois de fazer login com sucesso, você verá:
 
 ---
 
-## 🚀 Próximos Passos Após Ver a Tela
-
-1. **Testar Login** - Faça login com seu email
-2. **Explorar Dashboards** - Veja os componentes disponíveis
-3. **Verificar Console** - Abra DevTools (F12) para ver logs
-4. **Testar Funcionalidades** - Interaja com os componentes
-
----
-
 ## 💡 Dicas
 
 - A aplicação usa **Alchemy Account Kit** para autenticação sem fricção
 - Não precisa de MetaMask ou outras wallets tradicionais
 - O login é feito via email (OTP ou Magic Link)
 - A wallet é criada automaticamente (Smart Contract Wallet)
+- Os contratos estão na **Polygon Mainnet** (Chain ID: 137)
 
 ---
 

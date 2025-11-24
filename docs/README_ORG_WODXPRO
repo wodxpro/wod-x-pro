@@ -1,0 +1,59 @@
+
+# 🧬 WOD[X] PRO — Protocolo de Validação Atlética Descentralizada
+
+Transformamos esforço físico real em valor digital permanente.
+
+## 🌐 Sobre o Protocolo
+
+**WOD[X] PRO** é o primeiro protocolo descentralizado que recompensa atletas por performance validada por consenso.  
+Sem juízes. Sem intermediários. Apenas suor, vídeo e blockchain.
+
+- ✅ Desafios validados pela comunidade
+- ✅ Tokens $WOD distribuídos automaticamente
+- ✅ Armazenamento imutável via IPFS
+- ✅ Experiência simples com PIX + Social Login
+- ✅ Infraestrutura: Next.js 14 · Polygon L2 · Alchemy · IPFS
+
+---
+
+## 📂 Repositórios Oficiais
+
+| Nome           | Descrição                                        |
+|----------------|--------------------------------------------------|
+| [`wod-eth`](https://github.com/wodxpro/wod-eth)         | Smart Contracts ($WOD, Arena, Validator)                        |
+| [`wod-x-pro`](https://github.com/wodxpro/wod-x-pro)     | Frontend WebApp com validação, desafios e ranking               |
+| [`wod-protocol`](https://github.com/wodxpro/wod-protocol) | Landing page, documentação técnica e WHITEPAPER oficial        |
+
+---
+
+## 🔒 Propriedade Intelectual
+
+Todos os arquivos de documentação, marca, código e modelo econômico estão protegidos por registro em blockchain (Arweave) e licenciamento:
+
+- 📄 **Whitepaper** registrado via Arweave
+- 📘 Licença: **CC BY-NC-SA 4.0** para documentação e marca
+- 🧠 Código sob licença MIT
+
+---
+
+## 🧠 Visão
+
+WOD[X] PRO cria a nova economia do esforço.  
+O que antes era suor perdido, agora é ativo digital.
+
+> “Prove. Valide. Ganhe.”
+
+---
+
+## 📎 Links Rápidos
+
+- 🌐 Site oficial (em breve): [https://wod.eth](https://wod.eth)
+- 📄 Whitepaper: [`WHITEPAPER.md`](https://github.com/wodxpro/wod-protocol/blob/main/WHITEPAPER.md)
+- 🧠 Documentação Técnica: [`/docs`](https://github.com/wodxpro/wod-protocol/tree/main/docs)
+- 💰 Token Config: [`TOKEN_CONFIG.md`](https://github.com/wodxpro/wod-protocol/blob/main/TOKEN_CONFIG.md)
+
+---
+
+**Criado por**: Netto Mello (MELLØ)  
+**Organização**: [`wodxpro`](https://github.com/wodxpro) — desde 2025
+
