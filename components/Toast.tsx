@@ -31,7 +31,7 @@ export function Toast({ message, type, onClose, duration = 3000 }: ToastProps) {
       <span>{message}</span>
       <button
         onClick={onClose}
-        className="ml-auto text-white hover:text-gray-200 font-bold"
+        className="ml-auto text-arena hover:text-arena/80 font-bold"
       >
         ×
       </button>
